@@ -1,8 +1,9 @@
+import ruloc as ru
 def eff(X, Y):
   if X == 1:
       if Y == 1:
-          print("вы глупенький, но честный")
+          print(ru.result1_1)
       elif Y == 2:
-          print("вы в невевении")
+          print(ru.result1_2)
       else:
-          print("вы глухой, либо упрямый")
+          print(ru.result1_3)

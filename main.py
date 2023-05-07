@@ -1,8 +1,16 @@
 import ruloc as ru
 import effects as e
 
+def txt(X):
+    txteve1 = ru.txteve1
+    txteve2 = ru.txteve2
+    txteve3 = ru.txteve3
+    txt_sp = [0, txteve1, txteve2, txteve3]
+    print(txt_sp[X])
+
+
 def event(X):
-    ru.loc(X)
+    txt(X)
     ans = int(input())
     if ans == 1:
         e.eff(X, 1)
