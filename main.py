@@ -49,7 +49,7 @@ while not victory and min(money, diplo, happiness, military) > 0:
     print('', military)
     print('', diplo)
     print('', happiness)
-    random_event(c)
+    #random_event(c)
     event(c)
     c += 1
 

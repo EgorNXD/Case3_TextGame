@@ -8,7 +8,9 @@ txteve3 = "вопрос3" \
           "1.ответ" \
           "2.ответ" \
           "3.ответ"
-
+txteve4 = "plaseholder"
+txteve5 = "plaseholder"
+txteve6 = "plaseholder"
 
 # Результаты
 result1_1 = "вы глупенький, но честный"
