@@ -45,10 +45,10 @@ victory = False
 c = 1
 
 while not victory and min(money, diplo, happiness, military) > 0:
-    print('', money)
-    print('', military)
-    print('', diplo)
-    print('', happiness)
+    print(ru.money, money)
+    print(ru.military, military)
+    print(ru.diplo, diplo)
+    print(ru.happiness, happiness)
     #random_event(c)
     event(c)
     c += 1
