@@ -31,5 +31,21 @@ def event(x):
 Event function. Calls txt function and effct function.
 x - event identifier
 """
-
+#resorces and indicators
 event(1)
+res1 = 100
+res2 = 100
+res3 = 100
+victory = False
+indicator = 100
+c = 1
+
+while victory is False and indicator > 0:
+    print('', res1)
+    print('', res2)
+    print('', res3)
+    print('', indicator)
+    random_event(c)
+    event(c)
+    c += 1
+
