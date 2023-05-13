@@ -53,3 +53,8 @@ while not victory and min(money, diplo, happiness, military) > 0:
     event(c)
     c += 1
 
+
+if victory:
+    print("good")
+else:
+    print("bad")
