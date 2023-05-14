@@ -1,5 +1,9 @@
 import ruloc as ru
 
+money = 100
+military = 100
+diplo = 100
+happiness = 100
 
 def effct(x, y):
     if x == 1:
@@ -10,7 +14,8 @@ def effct(x, y):
         else:
             print(ru.result1_3)
 
-def random_effct(x, y, military, diplo, happiness, money):
+def random_effct(x, y):
+    global military, diplo, money, happiness
     if x == 0:
         if y == 1:
             military -= 15
@@ -50,7 +55,11 @@ def random_effct(x, y, military, diplo, happiness, money):
             happiness += 15
         else:
             happiness -= 15
-    return diplo, happiness, money, military
+    print(ru.money, money)
+    print(ru.military, military)
+    print(ru.happiness, happiness)
+    print(ru.diplo, diplo)
+
 
 
 """
