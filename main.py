@@ -1,15 +1,9 @@
 import ruloc as ru
 import effects as e
-
+from random import randint
 
 def txt(x):
-    txteve1 = ru.txteve1
-    txteve2 = ru.txteve2
-    txteve3 = ru.txteve3
-    txteve4 = ru.txteve4
-    txteve5 = ru.txteve5
-    txteve6 = ru.txteve6
-    txt_sp = [0, txteve1, txteve2, txteve3, txteve4, txteve5, txteve6]
+    txt_sp = [0, ru.txteve1, ru.txteve2, ru.txteve3, ru.txteve4, ru.txteve5, ru.txteve6]
     print(txt_sp[x])
 
 
@@ -18,7 +12,17 @@ Prints event flavor text and choices.
 x - event identifier
 """
 
+def random_event(military, diplo, happiness, money):
+    random_txt_sp = [ru.rand_ev1, ru.rand_ev2, ru.rand_ev3, ru.rand_ev4, ru.rand_ev5, ru.rand_ev6,
+                      ru.rand_ev7, ru.rand_ev8]
+    x = randint(0, 8)
+    print(random_txt_sp[x])
+    ans = int(input())
+    e.random_effct(x, ans, military, diplo, happiness, money)
 
+'''
+Prints random event flavor text and choices.
+'''
 def event(x):
     txt(x)
     ans = int(input())
@@ -36,6 +40,7 @@ x - event identifier
 """
 
 
+
 # Resources and modifiers
 money = 100
 military = 100
@@ -49,7 +54,7 @@ while not victory and min(money, diplo, happiness, military) > 0:
     print(ru.military, military)
     print(ru.diplo, diplo)
     print(ru.happiness, happiness)
-    #random_event(c)
+    random_event(military=military, diplo=diplo, happiness=happiness, money=money)
     event(c)
     c += 1
 
