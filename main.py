@@ -25,7 +25,7 @@ def random_event():
     global military, diplo, money, happiness
     random_txt_sp = [ru.rand_ev1, ru.rand_ev2, ru.rand_ev3, ru.rand_ev4, ru.rand_ev5, ru.rand_ev6,
                       ru.rand_ev7, ru.rand_ev8]
-    x = randint(0, 7)
+    x = randint(1, 8)
     print(random_txt_sp[x])
     ans = int(input())
     e.random_effct(x, ans)
