@@ -36,12 +36,7 @@ Prints random event flavor text and choices.
 def event(x):
     txt(x)
     ans = int(input())
-    if ans == 1:
-        e.effct(x, 1)
-    if ans == 2:
-        e.effct(x, 2)
-    if ans == 3:
-        e.effct(x, 3)
+    e.effct(x, ans)
 
 
 """
