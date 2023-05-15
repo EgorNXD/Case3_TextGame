@@ -48,14 +48,16 @@ def event(x):
 Event function. Calls txt function and effct function.
 x - event identifier
 """
-
+print(ru.start_text)
+a = input(ru.exposition_text)
 while not victory and min(money, diplo, happiness, military) > 0:
-    random_event()
-    #event(c)
+    if c > 2 and c % 2 == 1:
+        random_event()
+    event(c)
     c += 1
 
 
 if victory:
-    print("good")
+    print(ru.good_end)
 else:
-    print("bad")
+    print(ru.bad_end)

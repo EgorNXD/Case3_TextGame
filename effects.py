@@ -58,7 +58,6 @@ def random_effct(x, y):
     print(ru.diplo, diplo)
 
 
-
 """
 Changes player resources and modifiers according to player's choices.
 x - event identifier 
