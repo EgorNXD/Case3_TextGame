@@ -19,7 +19,7 @@ c = 1
 
 
 def txt(x):
-    txt_sp = [0, ru.txteve1, ru.txteve2, ru.txteve3, ru.txteve4, ru.txteve5, ru.txteve6, ru.texteve7, ru.txteve8,
+    txt_sp = [0, ru.txteve1, ru.txteve2, ru.txteve3, ru.txteve4, ru.txteve5, ru.txteve6, ru.txteve7, ru.txteve8,
               ru.txteve9, ru.txteve10, ru.txteve11, ru.txteve12, ru.txteve13, ru.txteve14]
     print(txt_sp[x])
 
@@ -31,9 +31,9 @@ x - event identifier
 
 def random_event():
     global military, diplo, money, happiness
-    random_txt_sp = [ru.rand_ev1, ru.rand_ev2, ru.rand_ev3, ru.rand_ev4, ru.rand_ev5, ru.rand_ev6,
-                      ru.rand_ev7, ru.rand_ev8]
-    x = randint(1, 8)
+    random_txt_sp = [ru.rand_ev0, ru.rand_ev1, ru.rand_ev2, ru.rand_ev3, ru.rand_ev4, ru.rand_ev5,
+                      ru.rand_ev6, ru.rand_ev7]
+    x = randint(0, 7)
     print(random_txt_sp[x])
     ans = int(input())
     e.random_effct(x, ans)
@@ -55,11 +55,13 @@ print(ru.start_text)
 print(ru.exposition_text)
 a = input()
 while not victory and min(money, diplo, happiness, military) > 0:
+    if c > 14:
+        victory = True
+        break
     if c > 2 and c % 2 == 1:
         random_event()
     event(c)
     c += 1
-
 
 if victory:
     print(ru.good_end)

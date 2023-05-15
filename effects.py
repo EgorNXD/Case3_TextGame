@@ -88,11 +88,11 @@ def effct(x, y):
             happiness += 10
     elif x == 11:
         if y == 1:
-            money *= 1.2
+            money = round(money * 1.2)
         elif y == 2:
-            diplo *= 1.2
+            diplo = round(diplo * 1.2)
         else:
-            happiness *= 1.2
+            happiness = round(happiness * 1.2)
     elif x == 12:
         if y == 1:
             military -= 10
@@ -116,6 +116,7 @@ def effct(x, y):
         else:
             happiness -= 40
         victory = True
+        print(victory)
     print(ru.military, military)
     print(ru.happiness, happiness)
     print(ru.diplo, diplo)
@@ -127,8 +128,8 @@ def effct(x, y):
 
 
 def random_effct(x, y):
-    global military, diplo, money, happiness
-    if x == 1:
+    global military, diplo, money, happiness, victory
+    if x == 0:
         if y == 1:
             military -= 15
         elif y == 2:
@@ -136,23 +137,23 @@ def random_effct(x, y):
             money -= 15
         else:
             happiness -= 20
-    elif x == 2:
+    elif x == 1:
         if y == 1:
             military -= 15
             happiness -= 20
         else:
             money -= 20
             happiness += 20
-    elif x == 3:
+    elif x == 2:
         happiness -= 10
         money -= 15
-    elif x == 4:
+    elif x == 3:
         money += 20
-    elif x == 5:
+    elif x == 4:
         money -= 10
-    elif x == 6:
+    elif x == 5:
         military -= 20
-    elif x == 7:
+    elif x == 6:
         if y == 1:
             happiness += 20
         elif y == 2:
@@ -161,7 +162,7 @@ def random_effct(x, y):
             diplo -= 10
         else:
             happiness -= 10
-    elif x == 8:
+    elif x == 7:
         if y == 1:
             money -= 10
             happiness += 15
