@@ -1,6 +1,13 @@
 import ruloc as ru
 import effects as e
 from random import randint
+# Salaries
+'''
+Yaroslav Elizarev = 40
+Alexey Polevik =
+Egor Nechaev =
+'''
+
 
 # Resources and modifiers
 money = 100
@@ -12,7 +19,8 @@ c = 1
 
 
 def txt(x):
-    txt_sp = [0, ru.txteve1, ru.txteve2, ru.txteve3, ru.txteve4, ru.txteve5, ru.txteve6]
+    txt_sp = [0, ru.txteve1, ru.txteve2, ru.txteve3, ru.txteve4, ru.txteve5, ru.txteve6, ru.texteve7, ru.txteve8,
+              ru.txteve9, ru.txteve10, ru.txteve11, ru.txteve12, ru.txteve13, ru.txteve14]
     print(txt_sp[x])
 
 
@@ -44,7 +52,8 @@ Event function. Calls txt function and effct function.
 x - event identifier
 """
 print(ru.start_text)
-a = input(ru.exposition_text)
+print(ru.exposition_text)
+a = input()
 while not victory and min(money, diplo, happiness, military) > 0:
     if c > 2 and c % 2 == 1:
         random_event()
