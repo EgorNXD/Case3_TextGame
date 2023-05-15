@@ -4,6 +4,7 @@ money = 100
 military = 100
 diplo = 100
 happiness = 100
+victory = False
 
 def effct(x, y):
     global military, diplo, money, happiness, victory
@@ -117,10 +118,10 @@ def effct(x, y):
             happiness -= 40
         victory = True
         print(victory)
+    print(ru.money, money)
     print(ru.military, military)
     print(ru.happiness, happiness)
     print(ru.diplo, diplo)
-    print(ru.money, money)
 
 
 
